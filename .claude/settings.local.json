@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx:*)",
+      "Read(//private/tmp/**)",
+      "Bash(rm -rf aviationiq-next)",
+      "Bash(1:*)",
+      "Bash(npm install:*)"
+    ]
+  }
+}
