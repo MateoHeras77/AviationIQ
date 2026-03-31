@@ -130,7 +130,7 @@ export default function OrganizationSettingsPage() {
                 )}
               />
               <div>
-                <FormLabel>Logo</FormLabel>
+                <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Logo</label>
                 <div className="mt-2 flex items-center gap-4">
                   <div className="flex h-24 w-24 items-center justify-center rounded-md border border-dashed">
                     <Upload className="h-8 w-8 text-muted-foreground" />

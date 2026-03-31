@@ -1,0 +1,1 @@
+- [Schema State](schema-state.md) — Full table list, enums, RLS patterns, and Sprint 3 additions (sla_compliance_records, 3 edge functions, RLS refinements)

@@ -23,10 +23,10 @@ export const aircraftTypeSchema = z.object({
   code: z.string().min(2, "Aircraft code must be at least 2 characters").max(10),
   name: z.string().min(2, "Aircraft name must be at least 2 characters"),
   manufacturer: z.string().min(2, "Manufacturer is required"),
-  transitCleanMinutes: z.coerce.number().min(1, "Must be at least 1 minute"),
-  fullCleanMinutes: z.coerce.number().min(1, "Must be at least 1 minute"),
-  deepCleanMinutes: z.coerce.number().min(1, "Must be at least 1 minute"),
-  defaultTurnaroundMinutes: z.coerce.number().min(1, "Must be at least 1 minute"),
+  transitCleanMinutes: z.number().min(1, "Must be at least 1 minute"),
+  fullCleanMinutes: z.number().min(1, "Must be at least 1 minute"),
+  deepCleanMinutes: z.number().min(1, "Must be at least 1 minute"),
+  defaultTurnaroundMinutes: z.number().min(1, "Must be at least 1 minute"),
 });
 
 export type AircraftTypeFormValues = z.infer<typeof aircraftTypeSchema>;
@@ -36,7 +36,7 @@ export const slaConfigSchema = z.object({
   events: z.array(
     z.object({
       eventType: z.string(),
-      maxDurationMinutes: z.coerce.number().min(0, "Duration must be non-negative"),
+      maxDurationMinutes: z.number().min(0, "Duration must be non-negative"),
     })
   ),
 });
@@ -49,7 +49,7 @@ export const notificationSettingsSchema = z.object({
       eventType: z.string(),
       inAppEnabled: z.boolean(),
       emailEnabled: z.boolean(),
-      thresholdMinutes: z.coerce.number().min(0),
+      thresholdMinutes: z.number().min(0),
       recipientRole: z.enum(["admin", "station_manager", "supervisor", "agent", "airline_client"]),
     })
   ),

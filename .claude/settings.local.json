@@ -5,7 +5,24 @@
       "Read(//private/tmp/**)",
       "Bash(rm -rf aviationiq-next)",
       "Bash(1:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(node:*)",
+      "Bash(ls /Users/mateoheras/Desktop/AviationIQ/node_modules/zod/lib/*.d.ts)",
+      "Bash(grep \"infer\\\\|Infer\\\\|$output\" /Users/mateoheras/Desktop/AviationIQ/node_modules/zod/index.d.ts)",
+      "Bash(grep -c \"ENABLE ROW LEVEL SECURITY\" supabase/migrations/*.sql)",
+      "Bash(grep \"CREATE TABLE \" supabase/migrations/*.sql)",
+      "Bash(grep \"organization_id UUID NOT NULL\" supabase/migrations/*.sql)",
+      "Bash(grep \"CREATE TRIGGER\" supabase/migrations/*.sql)",
+      "Bash(grep \"CREATE INDEX\" supabase/migrations/*.sql)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh issue:*)"
     ]
   }
 }

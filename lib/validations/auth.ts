@@ -1,22 +1,7 @@
-import { z } from "zod";
-
-export const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email address"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-});
-
-export type LoginFormValues = z.infer<typeof loginSchema>;
-
-export const registerSchema = z
-  .object({
-    email: z.string().email("Please enter a valid email address"),
-    fullName: z.string().min(2, "Full name must be at least 2 characters"),
-    password: z.string().min(8, "Password must be at least 8 characters"),
-    confirmPassword: z.string(),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match",
-    path: ["confirmPassword"],
-  });
-
-export type RegisterFormValues = z.infer<typeof registerSchema>;
+// Auth validation schemas
+//
+// Authentication is handled via Google OAuth through Supabase.
+// No email/password form schemas are needed.
+//
+// If additional auth-related validation is required in the future
+// (e.g., validating invite tokens, org selection forms), add schemas here.

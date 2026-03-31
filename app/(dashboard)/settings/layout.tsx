@@ -3,14 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const settingsTabs = [
-  { href: "/dashboard/settings/organization", label: "Organization" },
-  { href: "/dashboard/settings/users", label: "Users" },
-  { href: "/dashboard/settings/aircraft", label: "Aircraft Registry" },
-  { href: "/dashboard/settings/sla", label: "SLA Configuration" },
-  { href: "/dashboard/settings/notifications", label: "Notifications" },
+  { href: "/settings/organization", label: "Organization" },
+  { href: "/settings/users", label: "Users" },
+  { href: "/settings/aircraft", label: "Aircraft Registry" },
+  { href: "/settings/sla", label: "SLA Configuration" },
+  { href: "/settings/notifications", label: "Notifications" },
 ];
 
 export default function SettingsLayout({
